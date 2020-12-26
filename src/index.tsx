@@ -12,8 +12,9 @@ import '@fortawesome/fontawesome-free/css/fontawesome.min.css';
 
 const menuItems = [
   new MainMenuItem("Home", "/"),
+  new MainMenuItem("About us", "/page/about/"),
   new MainMenuItem("Contact", "/contact/"),
-  new MainMenuItem("LogIn", "/login/"),
+  new MainMenuItem("Log in", "/user/login/"),
 ]
 
 ReactDOM.render(

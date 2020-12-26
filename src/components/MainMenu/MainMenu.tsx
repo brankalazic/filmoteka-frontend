@@ -20,13 +20,7 @@ export class MainMenu extends React.Component<MainMenuProperties> {
         return (
             <Container>
                 <Nav variant="tabs">
-                    { this.props.items.map(item => {
-                        return (
-                            <Nav.Link href= { item.link}>
-                                {item.text}
-                            </Nav.Link>
-                        );
-                    })}
+                    { this.props.items.map(this.makeNavLink) }
                 </Nav>
             </Container>
         );
@@ -34,9 +28,9 @@ export class MainMenu extends React.Component<MainMenuProperties> {
 
     private makeNavLink(item: MainMenuItem) {
         return (
-            <Nav.Link href= { item.link}>
-                {item.text}
+            <Nav.Link href={ item.link }>
+                { item.text }
             </Nav.Link>
-        )
+        );
     }
 }
